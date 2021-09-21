@@ -1,10 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-speed = -10
-
-
-if(self.x < (-self.sprite_width * 0.5))
-{
-	self.x = room_width + (self.sprite_width * 0.5)
+if(x + (sprite_width * 0.5) <= 0) {
+	x = room_width + (sprite_width * 0.5);
 }

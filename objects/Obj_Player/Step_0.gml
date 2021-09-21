@@ -1,12 +1,12 @@
 /// @description
 //Stop gravity
 if((playerID==-1 && y >= room_height * 0.5) || (playerID==1 && y <= room_height * 0.5)) {
-	g = 0;
+	//g = 0;
 	ySpeed=0;
 } else {
-	g = maxG;
+	ySpeed -=g;
+	//g = maxG;
 }
-ySpeed -=g;
 if(player_command_up(playerID)){
 	ySpeed += jumpSpeed;
 }
