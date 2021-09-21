@@ -1,11 +1,12 @@
 /// @description
 //Stop gravity
-if(!(y >= playerID* room_height * 0.5)) {
-	ySpeed += g * playerID;
+if((y==-1 && y >= room_height * 0.5) || (y==1 && y <= room_height * 0.5)) {
+	g = 0;
 } else {
-	ySpeed = 0;
+	g = maxG;
 }
+ySpeed -= g;
 if(player_command_up(playerID)){
-	ySpeed += jumpSpeed * playerID;
+	ySpeed += jumpSpeed;
 }
-y += ySpeed;
+y += ySpeed * playerID;
