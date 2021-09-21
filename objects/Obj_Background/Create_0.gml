@@ -1,2 +1,2 @@
 ///@description 
-speed = -10
+speed = - BACKGROUND_SPEED;

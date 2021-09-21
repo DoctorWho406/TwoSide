@@ -3,6 +3,8 @@
     {"id":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"order":2,},
     {"id":{"name":"Spr_Background","path":"sprites/Spr_Background/Spr_Background.yy",},"order":0,},
     {"id":{"name":"Scr_Command","path":"scripts/Scr_Command/Scr_Command.yy",},"order":0,},
+    {"id":{"name":"Spr_Crate","path":"sprites/Spr_Crate/Spr_Crate.yy",},"order":2,},
+    {"id":{"name":"Obj_Crate","path":"objects/Obj_Crate/Obj_Crate.yy",},"order":3,},
     {"id":{"name":"Spr_Player","path":"sprites/Spr_Player/Spr_Player.yy",},"order":1,},
     {"id":{"name":"Obj_Background","path":"objects/Obj_Background/Obj_Background.yy",},"order":0,},
     {"id":{"name":"Obj_MainController","path":"objects/Obj_MainController/Obj_MainController.yy",},"order":1,},
