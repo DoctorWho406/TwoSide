@@ -1,5 +1,8 @@
 {
   "resources": [
+    {"id":{"name":"Spr_Background","path":"sprites/Spr_Background/Spr_Background.yy",},"order":0,},
+    {"id":{"name":"Obj_Background","path":"objects/Obj_Background/Obj_Background.yy",},"order":0,},
+    {"id":{"name":"Obj_MainController","path":"objects/Obj_MainController/Obj_MainController.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
