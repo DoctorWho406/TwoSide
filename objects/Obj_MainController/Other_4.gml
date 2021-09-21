@@ -1,3 +1,8 @@
 ///@description 
-instance_create_layer(Obj_Background.sprite_width * 0.5, Obj_Background.sprite_height * 0.5, "Instances", Obj_Background);
-instance_create_layer(Obj_Background.sprite_width * 1.5, Obj_Background.sprite_height * 0.5, "Instances", Obj_Background);
+objBackgroundHead = instance_create_layer(0, 0, "Instances", Obj_Background);
+objBackgroundTail = instance_create_layer(0, 0, "Instances", Obj_Background);
+
+objBackgroundHead.x = objBackgroundHead.sprite_width * 0.5;
+objBackgroundHead.y= objBackgroundHead.sprite_height * 0.5;
+objBackgroundTail.x = objBackgroundTail.sprite_width * 1.5;
+objBackgroundTail.y= objBackgroundTail.sprite_height * 0.5;
