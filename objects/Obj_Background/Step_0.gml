@@ -3,8 +3,8 @@
 
 speed = -10
 
-if(self.x - (self.sprite_width*0.5) < 0)
-{
-	self.x = self.sprite_width + (sprite_width*0.5)
-}
 
+if(self.x < (-self.sprite_width * 0.5))
+{
+	self.x = room_width + (self.sprite_width * 0.5)
+}
