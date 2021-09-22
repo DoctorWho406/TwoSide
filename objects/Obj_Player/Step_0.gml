@@ -11,4 +11,4 @@ if(player_command_jump(playerID)){
 	ySpeed += PLAYER_JUMP_SPEED;
 }
 
-y += (ySpeed * playerID)/60;
+y += (ySpeed * playerID);
