@@ -1,6 +1,7 @@
 /// @description 
 otherPlayer = noone;
 playerID = 0;
+playerCommandID = 0;
 
 ySpeed = 0;
 yRelative = 0;

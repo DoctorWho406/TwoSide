@@ -13,20 +13,25 @@ function player_idle() {
 	}
 }
 
-function player_run(_Player_Instance){	
-	if(otherPlayer.state == player_land) {
+function player_run(){
+	if(player_command_jump(playerID, playerCommandID)){
+		jumpIncreaseCount = 0;
+		jumpHeight = PLAYER_H_JUMP_INITIAL;
+		state = player_jump;
+	} else if(player_command_counter_jump(playerID, playerCommandID)) {
+		state = player_counter;
+	} else if(otherPlayer.state == player_land) {
 		if(jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
 			jumpIncreaseCount++;
-			jumpHeight *= PLAYER_JUMP_INCREASE_FACTOR;
+			jumpHeight = PLAYER_H_JUMP_INITIAL + (jumpIncreaseCount * PLAYER_JUMP_INCREASE_SUM);
 			state = player_jump;
 		}
-	}
-	if(player_command_jump(playerID)){
-		state = player_jump;
 	}
 }
 
 function player_jump() {
+	if(player_command_counter_jump(playerID, playerCommandID)) {
+	}
 	if(jumpState == JumpState.Start) {
 		ySpeed = PLAYER_JUMP_SPEED;
 		if(yRelative >= jumpHeight) {
