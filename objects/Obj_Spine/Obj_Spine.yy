@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite19",
-    "path": "sprites/Sprite19/Sprite19.yy",
+    "name": "Spr_Spine_Up",
+    "path": "sprites/Spr_Spine_Up/Spr_Spine_Up.yy",
   },
   "solid": false,
   "visible": true,
