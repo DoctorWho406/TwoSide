@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 79,
   "bbox_top": 0,
-  "bbox_bottom": 0,
+  "bbox_bottom": 32,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
-  "height": 64,
+  "width": 80,
+  "height": 33,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1e1c1813-b020-435c-aefc-a713ec796d7e","path":"sprites/Sprite11/Sprite11.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1e1c1813-b020-435c-aefc-a713ec796d7e","path":"sprites/Sprite11/Sprite11.yy",},"LayerId":{"name":"82e459f0-a56f-46ce-9db8-bd55b8fe0b95","path":"sprites/Sprite11/Sprite11.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},"resourceVersion":"1.0","name":"1e1c1813-b020-435c-aefc-a713ec796d7e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d8699f7e-8964-4d19-ad8d-b30af16b17f8","path":"sprites/Spr_Spine_Down/Spr_Spine_Down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d8699f7e-8964-4d19-ad8d-b30af16b17f8","path":"sprites/Spr_Spine_Down/Spr_Spine_Down.yy",},"LayerId":{"name":"338520d7-b49c-48c0-91e1-00b9d6275697","path":"sprites/Spr_Spine_Down/Spr_Spine_Down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"Spr_Spine_Down","path":"sprites/Spr_Spine_Down/Spr_Spine_Down.yy",},"resourceVersion":"1.0","name":"d8699f7e-8964-4d19-ad8d-b30af16b17f8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},
+    "spriteId": {"name":"Spr_Spine_Down","path":"sprites/Spr_Spine_Down/Spr_Spine_Down.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"faa1fe26-9b56-43b0-b5d0-79b5729e2853","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e1c1813-b020-435c-aefc-a713ec796d7e","path":"sprites/Sprite11/Sprite11.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d300eb60-5847-4095-af47-a4e8c28a2608","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d8699f7e-8964-4d19-ad8d-b30af16b17f8","path":"sprites/Spr_Spine_Down/Spr_Spine_Down.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},
+    "parent": {"name":"Spr_Spine_Down","path":"sprites/Spr_Spine_Down/Spr_Spine_Down.yy",},
     "resourceVersion": "1.3",
-    "name": "Sprite11",
+    "name": "Spr_Spine_Down",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"82e459f0-a56f-46ce-9db8-bd55b8fe0b95","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"338520d7-b49c-48c0-91e1-00b9d6275697","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Sprite11",
+  "name": "Spr_Spine_Down",
   "tags": [],
   "resourceType": "GMSprite",
 }
