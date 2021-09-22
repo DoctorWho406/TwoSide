@@ -3,4 +3,5 @@
 ySpeed = 0;
 yRelative = 0;
 state = player_run;
-jumpCount = PLAYER_JUMP_COUNT;
+jumpHeight = PLAYER_H_JUMP_INITIAL;
+jumpIncreaseCount = 0;

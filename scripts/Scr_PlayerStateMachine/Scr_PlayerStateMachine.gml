@@ -14,7 +14,7 @@ function player_jump() {
 		
 	}
 	ySpeed = PLAYER_JUMP_SPEED;
-	if(yRelative >= jumpCount) {
+	if(yRelative >= jumpHeight) {
 		ySpeed = -PLAYER_JUMP_SPEED;
 		//Controllo fine salto
 	}
