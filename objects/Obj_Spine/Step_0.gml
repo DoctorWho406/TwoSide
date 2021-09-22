@@ -2,5 +2,5 @@
 // You can write your code in this editor
 if (isColliding)
 {
-	//CallDeath
+	otherPlayer.state = player_dead;
 }
