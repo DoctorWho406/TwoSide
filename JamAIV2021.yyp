@@ -41,7 +41,7 @@
     {"id":{"name":"Spr_Player_Up_Jump_Loop","path":"sprites/Spr_Player_Up_Jump_Loop/Spr_Player_Up_Jump_Loop.yy",},"order":21,},
     {"id":{"name":"Obj_Spring","path":"objects/Obj_Spring/Obj_Spring.yy",},"order":5,},
     {"id":{"name":"Obj_HardGround","path":"objects/Obj_HardGround/Obj_HardGround.yy",},"order":12,},
-    {"id":{"name":"Sprite35","path":"sprites/Sprite35/Sprite35.yy",},"order":34,},
+    {"id":{"name":"Spr_Menu_Baclground_P_Botton","path":"sprites/Spr_Menu_Baclground_P_Botton/Spr_Menu_Baclground_P_Botton.yy",},"order":34,},
     {"id":{"name":"Object21","path":"objects/Object21/Object21.yy",},"order":20,},
     {"id":{"name":"Spr_Player_Crunch_End","path":"sprites/Spr_Player_Crunch_End/Spr_Player_Crunch_End.yy",},"order":19,},
     {"id":{"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},"order":37,},
