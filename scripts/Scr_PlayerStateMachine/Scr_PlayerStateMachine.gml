@@ -26,16 +26,19 @@ function player_run(_Player_Instance){
 }
 
 function player_jump() {
-	console_log("Jump state");
-	//Jump
-	ySpeed = PLAYER_JUMP_SPEED;
-	if(yRelative >= jumpHeight) {
+	if(jumpState == JumpState.Start) {
+		ySpeed = PLAYER_JUMP_SPEED;
+		if(yRelative >= jumpHeight) {
+			jumpState = JumpState.Loop;
+		}
+	} else {
 		ySpeed = -PLAYER_JUMP_SPEED;
 		//Controllo fine salto
 		if((playerID==-1 && y >= room_height * 0.5) || (playerID==1 && y <= room_height * 0.5)) {
 			y = room_height * 0.5;
 			ySpeed=0;
 			state = player_run;
+			jumpState = JumpState.Start;
 		}
 	}
 }

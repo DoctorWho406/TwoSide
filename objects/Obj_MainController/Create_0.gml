@@ -1,5 +1,5 @@
 ///@description ALL MACROS
-#macro		UNIT_TO_PIXEL				50
+#macro		UNIT_TO_PIXEL				20
 
 #macro		PLAYER_JUMP_SPEED			10
 //#macro		GRAVITY_FORCE				0.5
@@ -15,6 +15,8 @@
 
 #macro      H_MOVING_CRATE				100
 #macro      VELOCITY_MOVING_CRATE		3
+
+enum JumpState {Start, Loop, End};
 
 playerTop=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
 playerBottom=instance_create_layer(100,room_height,"Middleground_Layer",Obj_Player);
