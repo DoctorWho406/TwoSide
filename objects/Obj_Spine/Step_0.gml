@@ -2,8 +2,5 @@
 // You can write your code in this editor
 if (isColliding)
 {
-	if (State != noone)
-	{
-		//CallDeath
-	}
+	//CallDeath
 }

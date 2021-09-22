@@ -2,15 +2,15 @@
 // You can write your code in this editor
 if (isColliding)
 {
-	if (State = state.collidingOnLeft)
+	if (State == collisionState.collidingOnLeft)
 	{
 		//CallDeath
 	}
-	else if (State = state.collidingOnTop)
+	else if (State == collisionState.collidingOnTop)
 	{
 		//Boh
 	}
-	else if (State = state.collidingOnDown)
+	else if (State == collisionState.collidingOnDown)
 	{
 		//Boh
 	}

@@ -4,11 +4,11 @@ if (isColliding)
 {
 	if (State == collisionState.collidingOnLeft)
 	{
-		//CallDeath
+		//Boh
 	}
 	else if (State == collisionState.collidingOnTop)
 	{
-		//MegaJump?
+		//Boh
 	}
 	else if (State == collisionState.collidingOnDown)
 	{
