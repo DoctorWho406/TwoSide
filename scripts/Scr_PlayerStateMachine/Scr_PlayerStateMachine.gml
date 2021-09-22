@@ -19,9 +19,14 @@ function player_run(){
 		jumpHeight = PLAYER_H_JUMP_INITIAL;
 		state = player_jump;
 	} else if(player_command_counter_jump(playerID, playerCommandID)) {
-		state = player_counter;
+		jumpIncreaseCount = 0;
+		jumpHeight = PLAYER_H_JUMP_INITIAL;
+		state = player_jump;
 	} else if(otherPlayer.state == player_land) {
-		if(jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
+		if(counter) {
+			jumpIncreaseCount = 0;
+			jumpHeight = PLAYER_H_JUMP_INITIAL;
+		} else if(jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
 			jumpIncreaseCount++;
 			jumpHeight = PLAYER_H_JUMP_INITIAL + (jumpIncreaseCount * PLAYER_JUMP_INCREASE_SUM);
 			state = player_jump;
@@ -31,6 +36,7 @@ function player_run(){
 
 function player_jump() {
 	if(player_command_counter_jump(playerID, playerCommandID)) {
+		counter = true;
 	}
 	if(jumpState == JumpState.Start) {
 		ySpeed = PLAYER_JUMP_SPEED;
@@ -59,7 +65,7 @@ function player_land() {
 }
 
 function player_counter() {
-	
+	state = player_run();
 }
 
 function player_dead() {
