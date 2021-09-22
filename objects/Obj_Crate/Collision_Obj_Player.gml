@@ -3,6 +3,7 @@
 
 isColliding = true
 crate_angle = point_direction(x,y,Obj_Player.x, Obj_Player.y)
+otherPlayer = other;
 
 //LEFT SIDE
 if (crate_angle > 135 && crate_angle < 225)
