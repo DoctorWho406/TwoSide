@@ -2,18 +2,29 @@
 ///@description
 ///@param
 function player_run(_Player_Instance){
-	console_log(_Player_Instance);
-	//Controllo comandi
-	with(_Player_Instance) {
-	console_log("Current state: " + state);
-		
-		if(player_command_jump(playerID)){
-			state = player_jump;
-		}
+	if(player_command_jump(playerID)){
+		state = player_jump;
 	}
 }
 
-function player_jump(_Player_Instance) {
+function player_jump() {
+	console_log("Jump state");
 	//Jump
-	ySpeed += PLAYER_JUMP_SPEED;
+	if(otherPlayer.state == player_land) {
+		
+	}
+	ySpeed = PLAYER_JUMP_SPEED;
+	if(yRelative >= jumpCount) {
+		ySpeed = -PLAYER_JUMP_SPEED;
+		//Controllo fine salto
+	}
+}
+
+function player_land() {
+}
+
+function player_counter() {
+}
+
+function player_dead() {
 }

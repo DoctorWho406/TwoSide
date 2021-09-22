@@ -1,6 +1,6 @@
 /// @description
 //Stop gravity
-script_execute(state, instance_id);
+script_execute(state);
 
 if((playerID==-1 && y >= room_height * 0.5) || (playerID==1 && y <= room_height * 0.5)) {
 	y = room_height * 0.5;
@@ -14,3 +14,4 @@ if((playerID==-1 && y >= room_height * 0.5) || (playerID==1 && y <= room_height 
 //}
 
 y += (ySpeed * playerID);
+yRelative += ySpeed;
