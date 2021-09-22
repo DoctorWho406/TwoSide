@@ -1,7 +1,9 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description 
+otherPlayer = noone;
+playerID = 0;
+
 ySpeed = 0;
 yRelative = 0;
-state = player_run;
+state = player_idle;
 jumpHeight = PLAYER_H_JUMP_INITIAL;
 jumpIncreaseCount = 0;

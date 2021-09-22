@@ -1,7 +1,9 @@
 ///@description ALL MACROS
+#macro		UNIT_TO_PIXEL				50
+
 #macro		PLAYER_JUMP_SPEED			10
-#macro		GRAVITY_FORCE				0.5
-#macro		PLAYER_H_JUMP_INITIAL		10
+//#macro		GRAVITY_FORCE				0.5
+#macro		PLAYER_H_JUMP_INITIAL		10 * UNIT_TO_PIXEL
 #macro		PLAYER_JUMP_INCREASE_FACTOR	2/3
 #macro		PLAYER_MAX_JUMP_INCREASE_NUMBER	3
 
@@ -14,7 +16,14 @@
 #macro      H_MOVING_CRATE				100
 #macro      VELOCITY_MOVING_CRATE		3
 
-Player_Top=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
-Player_Bottom=instance_create_layer(room_height,0,"Middleground_Layer",Obj_Player);
-Player_Top.otherPlayer=Player_Bottom;
-Player_Bottom.otherPlayer=Player_Top;
+playerTop=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
+playerBottom=instance_create_layer(100,room_height,"Middleground_Layer",Obj_Player);
+
+//console_log("TOP: " + string(playerTop));
+//console_log("BOTTOM: " + string(playerBottom));
+playerTop.otherPlayer=playerBottom;
+playerTop.playerID = -1;
+playerBottom.otherPlayer=playerTop;
+playerBottom.playerID = 1;
+//console_log("TOP OTHER: " + string(playerTop.otherPlayer));
+//console_log("BOTTOM OTHER: " + string(playerBottom.otherPlayer));
