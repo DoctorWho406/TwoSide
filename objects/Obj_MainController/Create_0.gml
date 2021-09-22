@@ -6,6 +6,7 @@
 #macro		PLAYER_H_JUMP_INITIAL		10 * UNIT_TO_PIXEL
 #macro		PLAYER_JUMP_INCREASE_FACTOR	2/3
 #macro		PLAYER_MAX_JUMP_INCREASE_NUMBER	3
+#macro		PLAYER_H_END_JUMP			100
 
 
 
@@ -20,6 +21,7 @@ enum JumpState {Start, Loop, End};
 
 playerTop=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
 playerBottom=instance_create_layer(100,room_height,"Middleground_Layer",Obj_Player);
+playerBottom.image_yscale*= -1;
 
 //console_log("TOP: " + string(playerTop));
 //console_log("BOTTOM: " + string(playerBottom));
