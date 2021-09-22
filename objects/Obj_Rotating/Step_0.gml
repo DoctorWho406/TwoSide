@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (isColliding) {
-	otherPlayer.state = player_dead;
+//if (isColliding) {
+	//otherPlayer.state = player_dead;
 	//if (State == collisionState.collidingOnLeft)
 	//{
 	//	//Boh
@@ -14,5 +14,5 @@ if (isColliding) {
 	//{
 	//	//Boh
 	//}
-}
+//}
 image_angle+=10;
