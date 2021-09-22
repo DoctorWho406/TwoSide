@@ -15,3 +15,4 @@ if (isColliding)
 		//Boh
 	}
 }
+image_angle+=10;
