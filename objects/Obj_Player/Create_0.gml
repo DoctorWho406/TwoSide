@@ -9,4 +9,5 @@ state = player_idle;
 jumpState = JumpState.Start;
 jumpHeight = PLAYER_H_JUMP_INITIAL;
 jumpIncreaseCount = 0;
+
 counter = false;
