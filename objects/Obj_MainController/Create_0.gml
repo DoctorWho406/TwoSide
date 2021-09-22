@@ -11,7 +11,7 @@
 
 #macro		CRATE_SPEED					10
 
-#macro      H_MOVING_CRATE				5
+#macro      H_MOVING_CRATE				100
 #macro      VELOCITY_MOVING_CRATE		3
 
 Player_Top=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
