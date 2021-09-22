@@ -14,7 +14,7 @@
 #macro      H_MOVING_CRATE				5
 #macro      VELOCITY_MOVING_CRATE		3
 
-Player_Top=instance_create_layer(100,0,"Middelground_Layer",Obj_Player);
-Player_Bottom=instance_create_layer(room_height,0,"Middelground_Layer",Obj_Player);
+Player_Top=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
+Player_Bottom=instance_create_layer(room_height,0,"Middleground_Layer",Obj_Player);
 Player_Top.otherPlayer=Player_Bottom;
 Player_Bottom.otherPlayer=Player_Top;

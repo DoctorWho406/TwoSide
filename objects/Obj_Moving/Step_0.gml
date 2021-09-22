@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-vSpeed=0;
+
 if (isColliding)
 {
 	if (State == collisionState.collidingOnLeft)
