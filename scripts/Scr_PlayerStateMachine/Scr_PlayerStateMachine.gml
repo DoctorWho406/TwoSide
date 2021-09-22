@@ -1,78 +1,48 @@
 ///@function
 ///@description
 ///@param
-function player_idle() {
-	//On game init
-	if((playerID==-1 && y >= room_height * 0.5 - 50) || (playerID==1 && y <= room_height * 0.5 + 50)) {
-		y = playerID == -1 ? room_height * 0.5 - 50 : room_height * 0.5 + 50;
-		ySpeed=0;
-		yRelative = 0;
-		state = player_run;
-	} else {
-		ySpeed -= PLAYER_JUMP_SPEED;
+function player_set_state(_New_State) {
+	//sprite / image index
+	switch(_New_State) {
+		case player_run:
+			vSpeed = 0;
+			yRelative = 0;
+		break;
 	}
 }
 
-function player_run(){
-	if(player_command_jump(playerID, playerCommandID)){
-		jumpIncreaseCount = 0;
-		jumpHeight = PLAYER_H_JUMP_INITIAL;
-		state = player_jump;
-	} else if(player_command_counter_jump(playerID, playerCommandID)) {
-		jumpIncreaseCount = 0;
-		jumpHeight = PLAYER_H_JUMP_INITIAL;
-		state = player_jump;
-	} else if(otherPlayer.state == player_land && cronoCounter == -1) {
-		if(counter) {
-			jumpIncreaseCount = 0;
-			jumpHeight = PLAYER_H_JUMP_INITIAL;
-			counter = false;
-		} else if(jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
-			jumpIncreaseCount++;
-			jumpHeight = PLAYER_H_JUMP_INITIAL + (jumpIncreaseCount * PLAYER_JUMP_INCREASE_SUM);
-			state = player_jump;
-		}
+function player_run() {
+	if(player_command_jump(playerID, playerCommandID)) {
+		player_set_state(player_start_jump);
+	} else if(player_command_counter(playerID, playerCommandID)) {
+		player_set_state(player_counter);
 	}
+}
+
+function player_start_jump() {
+	ySpeed = PLAYER_JUMP_SPEED;
 }
 
 function player_jump() {
-	if(jumpState == JumpState.Start) {
-		ySpeed = PLAYER_JUMP_SPEED;
+	if(ySpeed > 0) {
 		if(yRelative >= jumpHeight) {
-			if(player_command_counter_jump(playerID, playerCommandID)) {
-				counter = true;
-			}
-			jumpState = JumpState.Loop;
+			ySpeed = - PLAYER_JUMP_SPEED;
 		}
 	} else {
-		ySpeed = -PLAYER_JUMP_SPEED;
-		//Controllo fine salto
-		if(jumpState != JumpState.End && ((playerID==-1 && y >= room_height * 0.5 - PLAYER_H_END_JUMP) || (playerID==1 && y <= room_height * 0.5 + PLAYER_H_END_JUMP))) {
-			state = player_land;
-		}
+		//Calcolo distanza dall'atterraggio
 	}
+}
+
+function player_end_jump() {
+	
 }
 
 function player_land() {
-	jumpState = JumpState.End;
-	if((playerID == -1 && y >= room_height * 0.5 - 50) || (playerID==1 && y <= room_height * 0.5 + 50)) {
-		y = playerID == -1 ? room_height * 0.5 - 50 : room_height * 0.5 + 50;
-		ySpeed=0;
-		jumpState = JumpState.Start;
-	}
-	if(cronoCounter < PLAYER_COUNTER_TIMER * FPS) {
-		if(cronoCounter == -1) {
-			cronoCounter = 0;
-		}
-		cronoCounter ++;
-	} else {
-		cronoCounter = -1;
-		state = player_run;
-	}
+	
 }
 
 function player_counter() {
-	state = player_run;
+
 }
 
 function player_dead() {

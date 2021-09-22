@@ -25,7 +25,6 @@
     {"id":{"name":"Obj_Crate","path":"objects/Obj_Crate/Obj_Crate.yy",},"order":3,},
     {"id":{"name":"Spr_Ramp","path":"sprites/Spr_Ramp/Spr_Ramp.yy",},"order":6,},
     {"id":{"name":"Spr_Player","path":"sprites/Spr_Player/Spr_Player.yy",},"order":1,},
-    {"id":{"name":"Sprite19","path":"sprites/Sprite19/Sprite19.yy",},"order":15,},
     {"id":{"name":"Spr_Teleport","path":"sprites/Spr_Teleport/Spr_Teleport.yy",},"order":5,},
     {"id":{"name":"Obj_Moving","path":"objects/Obj_Moving/Obj_Moving.yy",},"order":11,},
     {"id":{"name":"Scr_PlayerStateMachine","path":"scripts/Scr_PlayerStateMachine/Scr_PlayerStateMachine.yy",},"order":1,},
