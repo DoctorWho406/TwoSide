@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Spr_Crate",
-    "path": "sprites/Spr_Crate/Spr_Crate.yy",
+    "name": "Spr_Crate_Up",
+    "path": "sprites/Spr_Crate_Up/Spr_Crate_Up.yy",
   },
   "solid": false,
   "visible": true,
