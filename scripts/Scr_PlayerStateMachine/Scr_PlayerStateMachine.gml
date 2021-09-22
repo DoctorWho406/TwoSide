@@ -31,24 +31,26 @@ function player_set_state(_New_State) {
 }
 
 function player_run() {
-	console_log("CI PASSO 1");
+	//console_log("CI PASSO 1");
 	if(player_command_jump(playerID, playerCommandID)) {
+		global.jumpIncreaseCount = 0;
+		global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 		player_set_state(player_start_jump);
-		jumpIncreaseCount = 0;
-		jumpHeight = PLAYER_H_JUMP_INITIAL;
 	} else if(player_command_counter(playerID, playerCommandID)) {
 		player_set_state(player_counter);
 	} else if (otherPlayer.state == player_land && otherPlayer.cronoCounter == PLAYER_COUNTER_TIMER) {
 		player_set_state(player_start_jump);
-		if(jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
-			jumpIncreaseCount++;
-			jumpHeight = PLAYER_H_JUMP_INITIAL + (jumpIncreaseCount * PLAYER_JUMP_INCREASE_SUM);
+		if(global.jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
+			global.jumpIncreaseCount++;			
+			//console_log("JUMP COUNT: " + string(global.jumpIncreaseCount));
+			global.jumpHeight = PLAYER_H_JUMP_INITIAL + (global.jumpIncreaseCount * PLAYER_JUMP_INCREASE_SUM);
+			//console_log("JUMP HEIGHT : " + string(global.jumpHeight));
 		}
 	}
 }
 
 function player_start_jump() {
-	console_log("CI PASSO 2");
+	//console_log("CI PASSO 2");
 	if (image_index > image_number - 1)  {
 		player_set_state(player_jump);
     }
@@ -56,30 +58,31 @@ function player_start_jump() {
 
 function player_jump() {
 	if(ySpeed > 0) {
-	console_log("CI PASSO 3");
-		if(yRelative >= jumpHeight) {
+	//console_log("CI PASSO 3");
+		if(yRelative >= global.jumpHeight) {
+			console_log("Con" + string(yRelative) + " ho raggiunto " + string(global.jumpHeight));
 			ySpeed = - PLAYER_JUMP_SPEED;
 		}
 	} else {
-		console_log("CI PASSO 4");
+		//console_log("CI PASSO 4");
 		var ground = instance_find(Obj_Ground, 0);
 		//console_log("Ground " + string(ground) + " y: " + string(ground.y) + " halfHeigth: " + string((ground.sprite_height * 0.5)));
 		if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= PLAYER_H_END_JUMP) {
-			console_log("CI PASSO 5");
+			//console_log("CI PASSO 5");
 			player_set_state(player_end_jump);
 		}
 	}
 }
 
 function player_end_jump() {
-	console_log("CI PASSO 6");
+	//console_log("CI PASSO 6");
 	if(player_command_jump(playerID, playerCommandID)) {
 		nextJump = true;
-		console_log("SALTO PRENOTATO 1");
+		//console_log("SALTO PRENOTATO 1");
 	}
 	var ground = instance_find(Obj_Ground, 0);
 	if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
-		console_log("CI PASSO 7");
+		//console_log("CI PASSO 7");
 		player_set_state(player_land);
 	}
 }
@@ -87,25 +90,31 @@ function player_end_jump() {
 function player_land() {
 	if(player_command_jump(playerID, playerCommandID)) {
 		nextJump = true;
-		console_log("SALTO PRENOTATO 2");
+		//console_log("SALTO PRENOTATO 2");
 	}
 	if(cronoCounter < PLAYER_COUNTER_TIMER) {
-		console_log("CI PASSO 8");
+		//console_log("CI PASSO 8");
 		cronoCounter ++;
 	} else {
-		console_log("CI PASSO 9");
+		//console_log("CI PASSO 9");
 		if(nextJump) {
-			console_log("CI PASSO 10");
+			//console_log("CI PASSO 10");
+			global.jumpHeight = PLAYER_H_JUMP_INITIAL;
+			global.jumpIncreaseCount = 0;
 			player_set_state(player_jump);
 		} else {
-			console_log("CI PASSO 11");
+			//console_log("CI PASSO 11");
 			player_set_state(player_run);
 		}
 	}
 }
 
 function player_counter() {
-
+	if (image_index > image_number - 1)  {
+		global.jumpIncreaseCount = 0;
+		global.jumpHeight = PLAYER_H_JUMP_INITIAL;
+		player_set_state(player_run);
+    }	
 }
 
 function player_dead() {
