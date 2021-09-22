@@ -35,17 +35,21 @@ function player_jump() {
 		ySpeed = -PLAYER_JUMP_SPEED;
 		//Controllo fine salto
 		if(jumpState != JumpState.End && ((playerID==-1 && y >= room_height * 0.5 - PLAYER_H_END_JUMP) || (playerID==1 && y <= room_height * 0.5 + PLAYER_H_END_JUMP))) {
-			jumpState = JumpState.End;
-		} else if((playerID==-1 && y >= room_height * 0.5 - 50) || (playerID==1 && y <= room_height * 0.5 + 50)) {
-			y = playerID == -1 ? room_height * 0.5 - 50 : room_height * 0.5 + 50;
-			ySpeed=0;
-			state = player_run;
-			jumpState = JumpState.Start;
+			state = player_land;
 		}
 	}
 }
 
 function player_land() {
+	jumpState = JumpState.End;
+	if((playerID==-1 && y >= room_height * 0.5 - 50) || (playerID==1 && y <= room_height * 0.5 + 50)) {
+		y = playerID == -1 ? room_height * 0.5 - 50 : room_height * 0.5 + 50;
+		ySpeed=0;
+		state = player_run;
+		jumpIncreaseCount = 0;
+		jumpHeight = PLAYER_H_JUMP_INITIAL;
+		jumpState = JumpState.Start;
+	}
 }
 
 function player_counter() {
