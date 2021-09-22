@@ -13,14 +13,15 @@ function player_idle() {
 	}
 }
 
-function player_run(_Player_Instance){
-	if(player_command_jump(playerID)){
-		if(otherPlayer.state == player_land) {
-			if(jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
-				jumpIncreaseCount++;
-				jumpHeight *= PLAYER_JUMP_INCREASE_FACTOR;
-			}
+function player_run(_Player_Instance){	
+	if(otherPlayer.state == player_land) {
+		if(jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
+			jumpIncreaseCount++;
+			jumpHeight *= PLAYER_JUMP_INCREASE_FACTOR;
+			state = player_jump;
 		}
+	}
+	if(player_command_jump(playerID)){
 		state = player_jump;
 	}
 }
@@ -53,7 +54,9 @@ function player_land() {
 }
 
 function player_counter() {
+	
 }
 
 function player_dead() {
+	game_restart();
 }
