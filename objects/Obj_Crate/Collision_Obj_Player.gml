@@ -7,6 +7,7 @@ crate_angle = point_direction(x,y,Obj_Player.x, Obj_Player.y)
 if (crate_angle > 135 && crate_angle < 225)
 {
 	State = state.collidingOnLeft
+	isColliding = true
 }
 
 
@@ -14,6 +15,7 @@ if (crate_angle > 135 && crate_angle < 225)
 if (crate_angle > 45 && crate_angle < 135)
 {
 	State = state.collidingOnTop
+	isColliding = true
 }
 
 
@@ -21,4 +23,5 @@ if (crate_angle > 45 && crate_angle < 135)
 if (crate_angle > 225 && crate_angle < 315)
 {
 	State = state.collidingOnDown
+	isColliding = true
 }
