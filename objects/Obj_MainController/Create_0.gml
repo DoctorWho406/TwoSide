@@ -11,5 +11,5 @@
 
 #macro		CRATE_SPEED					10
 
-#macro      H_MOVING_CRATE				1
+#macro      H_MOVING_CRATE				5
 #macro      VELOCITY_MOVING_CRATE		3

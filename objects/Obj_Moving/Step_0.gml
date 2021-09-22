@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+vSpeed=0;
 if (isColliding)
 {
 	if (State == collisionState.collidingOnLeft)
@@ -15,5 +16,5 @@ if (isColliding)
 		//Boh
 	}
 }
-vSpeed= VELOCITY_MOVING_CRATE;
-y+=sin(vSpeed)*H_MOVING_CRATE;
+vSpeed+=VELOCITY_MOVING_CRATE;
+y-=sin(vSpeed)*H_MOVING_CRATE;
