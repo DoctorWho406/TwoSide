@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"Obj_Ramp","path":"objects/Obj_Ramp/Obj_Ramp.yy",},"order":7,},
     {"id":{"name":"Spr_Spring","path":"sprites/Spr_Spring/Spr_Spring.yy",},"order":4,},
+    {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},"order":8,},
     {"id":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"order":2,},
     {"id":{"name":"Obj_Button","path":"objects/Obj_Button/Obj_Button.yy",},"order":4,},
     {"id":{"name":"Obj_Rotating","path":"objects/Obj_Rotating/Obj_Rotating.yy",},"order":10,},

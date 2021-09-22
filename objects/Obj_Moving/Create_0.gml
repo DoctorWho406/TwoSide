@@ -4,3 +4,4 @@
 // Inherit the parent event
 event_inherited();
 vSpeed=0;
+yStart = y;
