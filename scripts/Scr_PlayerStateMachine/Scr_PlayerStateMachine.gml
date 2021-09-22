@@ -22,7 +22,7 @@ function player_run(){
 		jumpIncreaseCount = 0;
 		jumpHeight = PLAYER_H_JUMP_INITIAL;
 		state = player_jump;
-	} else if(otherPlayer.state == player_land) {
+	} else if(otherPlayer.state == player_land && cronoCounter == -1) {
 		if(counter) {
 			jumpIncreaseCount = 0;
 			jumpHeight = PLAYER_H_JUMP_INITIAL;
@@ -58,10 +58,16 @@ function player_land() {
 	if((playerID == -1 && y >= room_height * 0.5 - 50) || (playerID==1 && y <= room_height * 0.5 + 50)) {
 		y = playerID == -1 ? room_height * 0.5 - 50 : room_height * 0.5 + 50;
 		ySpeed=0;
-		state = player_run;
-		jumpIncreaseCount = 0;
-		jumpHeight = PLAYER_H_JUMP_INITIAL;
 		jumpState = JumpState.Start;
+	}
+	if(cronoCounter < PLAYER_COUNTER_TIMER * FPS) {
+		if(cronoCounter == -1) {
+			cronoCounter = 0;
+		}
+		cronoCounter ++;
+	} else {
+		cronoCounter = -1;
+		state = player_run;
 	}
 }
 
