@@ -5,6 +5,7 @@
     {"id":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"order":2,},
     {"id":{"name":"Obj_Button","path":"objects/Obj_Button/Obj_Button.yy",},"order":4,},
     {"id":{"name":"Spr_Background","path":"sprites/Spr_Background/Spr_Background.yy",},"order":0,},
+    {"id":{"name":"Obj_Spine","path":"objects/Obj_Spine/Obj_Spine.yy",},"order":9,},
     {"id":{"name":"Obj_Spring","path":"objects/Obj_Spring/Obj_Spring.yy",},"order":5,},
     {"id":{"name":"Obj_Ground","path":"objects/Obj_Ground/Obj_Ground.yy",},"order":8,},
     {"id":{"name":"Scr_Command","path":"scripts/Scr_Command/Scr_Command.yy",},"order":0,},
