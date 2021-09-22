@@ -4,22 +4,22 @@
 function player_set_state(_New_State) {
 	switch(_New_State) {
 		case player_run:
-			spirte_index = Spr_Player_Run;
+			sprite_index = Spr_Player_Run;
 			ySpeed = 0;
 			yRelative = 0;
 		break;
 		case player_start_jump:
-			spirte_index = Spr_Player_Up_Jump_Start;
+			sprite_index = Spr_Player_Up_Jump_Start;
 			ySpeed = PLAYER_JUMP_SPEED;
 		break;
 		case player_jump:
-			spirte_index = Spr_Player_Up_Jump_Loop;
+			sprite_index = Spr_Player_Up_Jump_Loop;
 		break;
 		case player_end_jump:
-			spirte_index = Spr_Player_Up_Jump_Loop;
+			sprite_index = Spr_Player_Up_Jump_Loop;
 		break;
 		case player_land:
-			spirte_index = Spr_Player_Up_Jump_Landing;
+			sprite_index = Spr_Player_Up_Jump_Landing;
 			var ground = instance_find(Obj_Ground, 0);
 			y = ground.y + (ground.sprite_height * 0.5);
 			cronoCounter = 0;
