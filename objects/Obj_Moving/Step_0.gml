@@ -15,3 +15,5 @@ if (isColliding)
 		//Boh
 	}
 }
+vSpeed+= VELOCITY_MOVING_CRATE
+y+=sin(vSpeed)*H_MOVING_CRATE;
