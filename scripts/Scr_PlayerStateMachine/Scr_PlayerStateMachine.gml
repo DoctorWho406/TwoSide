@@ -15,6 +15,10 @@ function player_set_state(_New_State) {
 		case player_jump:
 			sprite_index = Spr_Player_Up_Jump_Loop;
 		break;
+		case player_middle_jump:
+			sprite_index = Spr_Player_Up_Jump_Loop;
+			ySpeed = 0;
+		break;
 		case player_end_jump:
 			sprite_index = Spr_Player_Up_Jump_Loop;
 		break;
@@ -61,8 +65,9 @@ function player_jump() {
 	if(ySpeed > 0) {
 	//console_log("CI PASSO 3");
 		if(yRelative >= global.jumpHeight) {
-			console_log("Con" + string(yRelative) + " ho raggiunto " + string(global.jumpHeight));
+			//console_log("Con" + string(yRelative) + " ho raggiunto " + string(global.jumpHeight));
 			ySpeed = - PLAYER_JUMP_SPEED;
+			player_set_state(player_middle_jump);
 		}
 	} else {
 		//console_log("CI PASSO 4");
@@ -75,19 +80,28 @@ function player_jump() {
 	}
 }
 
+function player_middle_jump() {
+	if(cronoMiddleJump < PLAYER_MIDDLE_JUMP_TIMER) {
+		cronoMiddleJump ++;
+	} else {
+		cronoMiddleJump = 0;
+		ySpeed = - PLAYER_JUMP_SPEED;
+		player_set_state(player_jump);
+	}
+}
+
 function player_end_jump() {
 	//console_log("CI PASSO 6");
 	if(player_command_jump(playerID, playerCommandID)) {
 		nextJump = true;
 		//console_log("SALTO PRENOTATO 1");
 	}
-	
 	var ground = instance_position( x, y+ySpeed, Obj_Crate || Obj_Ground);
-	if(ground!=-4){/*instance_find(Obj_Ground, 0);*/
-	if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
-		//console_log("CI PASSO 7");
-		player_set_state(player_land);
-	}
+	if(ground!=-4) {/*instance_find(Obj_Ground, 0);*/
+		if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
+			//console_log("CI PASSO 7");
+			player_set_state(player_land);
+		}
 	}
 }
 
