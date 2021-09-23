@@ -46,7 +46,7 @@ function player_run() {
 	} else if (otherPlayer.state == player_land && otherPlayer.cronoCounter == PLAYER_COUNTER_TIMER) {
 		player_set_state(player_start_jump);
 		if(global.jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
-			global.jumpIncreaseCount++;			
+			global.jumpIncreaseCount++;
 			//console_log("JUMP COUNT: " + string(global.jumpIncreaseCount));
 			global.jumpHeight = PLAYER_H_JUMP_INITIAL + (global.jumpIncreaseCount * PLAYER_JUMP_INCREASE_SUM);
 			//console_log("JUMP HEIGHT : " + string(global.jumpHeight));
@@ -101,7 +101,7 @@ function player_end_jump() {
 			//console_log("CI PASSO 7");
 			player_set_state(player_land);
 		}
-	
+
 }
 
 function player_land() {
@@ -132,9 +132,10 @@ function player_counter() {
 		global.jumpIncreaseCount = 0;
 		global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 		player_set_state(player_run);
-    }	
+    }
 }
 
 function player_dead() {
 	game_restart();
+}
 }
