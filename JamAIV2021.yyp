@@ -18,7 +18,7 @@
     {"id":{"name":"Sprite51","path":"sprites/Sprite51/Sprite51.yy",},"order":50,},
     {"id":{"name":"Sprite50","path":"sprites/Sprite50/Sprite50.yy",},"order":49,},
     {"id":{"name":"Sprite46","path":"sprites/Sprite46/Sprite46.yy",},"order":45,},
-    {"id":{"name":"Sprite41","path":"sprites/Sprite41/Sprite41.yy",},"order":40,},
+    {"id":{"name":"Spr_Player_Down_Run","path":"sprites/Spr_Player_Down_Run/Spr_Player_Down_Run.yy",},"order":40,},
     {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},"order":8,},
     {"id":{"name":"Spr_Background_Down_1","path":"sprites/Spr_Background_Down_1/Spr_Background_Down_1.yy",},"order":35,},
     {"id":{"name":"Obj_Player","path":"objects/Obj_Player/Obj_Player.yy",},"order":2,},
