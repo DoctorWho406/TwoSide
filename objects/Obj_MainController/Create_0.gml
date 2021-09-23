@@ -16,5 +16,9 @@
 #macro      H_MOVING_CRATE				100
 #macro      VELOCITY_MOVING_CRATE		3
 
+#macro      SCORE_START_ADD_FACTOR		4
+#macro      SCORE_MULTIPLY_FACTOR		2
+#macro		SCORE_TIMER					1
+
 global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 global.jumpIncreaseCount = 0;
