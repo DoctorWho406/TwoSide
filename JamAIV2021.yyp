@@ -84,7 +84,6 @@
     {"id":{"name":"Obj_Background_Up_Azure_2","path":"objects/Obj_Background_Up_Azure_2/Obj_Background_Up_Azure_2.yy",},"order":16,},
     {"id":{"name":"Obj_Background_Down_2","path":"objects/Obj_Background_Down_2/Obj_Background_Down_2.yy",},"order":24,},
     {"id":{"name":"Sfondo_Completo_Sgrantato","path":"sprites/Sfondo_Completo_Sgrantato/Sfondo_Completo_Sgrantato.yy",},"order":27,},
-    {"id":{"name":"Spr_End_Score","path":"sprites/Spr_End_Score/Spr_End_Score.yy",},"order":52,},
     {"id":{"name":"Spr_Menu_Background_Two","path":"sprites/Spr_Menu_Background_Two/Spr_Menu_Background_Two.yy",},"order":32,},
     {"id":{"name":"Spr_Player_Crunch_Loop","path":"sprites/Spr_Player_Crunch_Loop/Spr_Player_Crunch_Loop.yy",},"order":18,},
     {"id":{"name":"Obj_Teleport","path":"objects/Obj_Teleport/Obj_Teleport.yy",},"order":6,},
