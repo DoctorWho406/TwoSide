@@ -142,5 +142,5 @@ function player_counter() {
 
 function player_dead() {
 	//audio_play_sound("Snd_DeathSound",false);
-	game_restart();
+	room_goto_next();
 }
