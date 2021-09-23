@@ -1,5 +1,9 @@
-///@description 
-audio_play_sound(Snd_GamePlaySound, 1000,true);
+///@description
+audio_stop_sound(Snd_MenuPlaySound);
+if (!audio_is_playing(Snd_GamePlaySound))
+{
+	audio_play_sound(Snd_GamePlaySound, 1000,true);
+}
 playerTop=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
 playerBottom=instance_create_layer(100,room_height,"Middleground_Layer",Obj_Player);
 playerBottom.sprite_index= Spr_Player_Down_Run;
