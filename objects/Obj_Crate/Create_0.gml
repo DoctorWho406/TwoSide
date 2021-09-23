@@ -1,4 +1,3 @@
-State = noone
-isColliding = false
-enum collisionState {collidingOnLeft, collidingOnTop, collidingOnDown}
-speed = -5
+State = noone;
+isColliding = false;
+speed = -5;

@@ -138,4 +138,3 @@ function player_counter() {
 function player_dead() {
 	game_restart();
 }
-}
