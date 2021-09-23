@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Spr_Spine_Up",
-    "path": "sprites/Spr_Spine_Up/Spr_Spine_Up.yy",
+    "name": "Spr_Spine_Down",
+    "path": "sprites/Spr_Spine_Down/Spr_Spine_Down.yy",
   },
   "solid": false,
   "visible": true,
