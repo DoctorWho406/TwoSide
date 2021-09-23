@@ -81,10 +81,13 @@ function player_end_jump() {
 		nextJump = true;
 		//console_log("SALTO PRENOTATO 1");
 	}
-	var ground = instance_find(Obj_Ground, 0);
+	
+	var ground = instance_position( x, y+ySpeed, Obj_Crate || Obj_Ground);
+	if(ground!=-4){/*instance_find(Obj_Ground, 0);*/
 	if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
 		//console_log("CI PASSO 7");
 		player_set_state(player_land);
+	}
 	}
 }
 
