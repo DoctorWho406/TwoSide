@@ -114,6 +114,7 @@ function player_land() {
 		cronoCounter ++;
 		if(otherPlayer.state == player_end_jump) {
 			nextJump = true;
+			otherPlayer.nextJump = true;
 		}
 	} else {
 		//console_log("CI PASSO 9");
