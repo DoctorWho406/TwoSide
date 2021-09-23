@@ -6,7 +6,9 @@ function console_log(text){
 }
 function Scr_IDCollider(){
 var _obj= instance_position(x, y+ySpeed, Obj_Crate);
-if(_obj!=4)return _obj ;
+if(_obj!=-4)return _obj ;
 _obj=instance_position(x, y+ySpeed, Obj_Ground);
-if(_obj!=4) return _obj;
+if(_obj!=-4) return _obj;
+
+return noone;
 }
