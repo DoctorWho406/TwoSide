@@ -2,6 +2,7 @@
 //audio_play_sound("Snd_GamePlaySound",true);
 playerTop=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
 playerBottom=instance_create_layer(100,room_height,"Middleground_Layer",Obj_Player);
+playerBottom.sprite_index= Spr_Player_Down_Run;
 playerBottom.image_yscale*= -1;
 
 playerTop.otherPlayer=playerBottom;
