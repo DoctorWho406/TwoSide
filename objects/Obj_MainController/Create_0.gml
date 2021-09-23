@@ -2,6 +2,8 @@
 #macro		UNIT_TO_PIXEL				85
 #macro		FPS							60
 
+#macro		GAME_SPEED					5
+
 #macro		PLAYER_JUMP_SPEED			10
 #macro		PLAYER_H_JUMP_INITIAL		2.5 * UNIT_TO_PIXEL
 #macro		PLAYER_JUMP_INCREASE_SUM	1.8* UNIT_TO_PIXEL

@@ -1,4 +1,4 @@
 State = noone
 isColliding = false
 //enum collisionState {collidingOnLeft, collidingOnTop, collidingOnDown}
-speed = -5
+speed = GAME_SPEED;
