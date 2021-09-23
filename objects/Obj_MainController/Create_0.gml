@@ -16,15 +16,5 @@
 #macro      H_MOVING_CRATE				100
 #macro      VELOCITY_MOVING_CRATE		3
 
-enum JumpState {Start, Loop, End};
-
-playerTop=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
-playerBottom=instance_create_layer(100,room_height,"Middleground_Layer",Obj_Player);
-playerBottom.image_yscale*= -1;
-
-playerTop.otherPlayer=playerBottom;
-playerTop.playerID = -1;
-playerTop.playerCommandID = -1;
-playerBottom.otherPlayer=playerTop;
-playerBottom.playerID = 1;
-playerBottom.playerCommandID = 1;
+global.jumpHeight = PLAYER_H_JUMP_INITIAL;
+global.jumpIncreaseCount = 0;

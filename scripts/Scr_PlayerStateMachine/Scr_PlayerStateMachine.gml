@@ -21,7 +21,8 @@ function player_set_state(_New_State) {
 		case player_land:
 			sprite_index = Spr_Player_Up_Jump_Landing;
 			var ground = instance_find(Obj_Ground, 0);
-			y = ground.y + (ground.sprite_height * 0.5);
+			y = ground.y + ((ground.sprite_height * 0.5 + 1) * playerID);
+			//y = ground.y + (ground.sprite_height * 0.5);
 			cronoCounter = 0;
 			ySpeed = 0;
 			yRelative = 0;
@@ -31,7 +32,7 @@ function player_set_state(_New_State) {
 }
 
 function player_run() {
-	//console_log("CI PASSO 1");
+	//console_log("CI PASSO 1")
 	if(player_command_jump(playerID, playerCommandID)) {
 		global.jumpIncreaseCount = 0;
 		global.jumpHeight = PLAYER_H_JUMP_INITIAL;
@@ -99,9 +100,10 @@ function player_land() {
 		//console_log("CI PASSO 9");
 		if(nextJump) {
 			//console_log("CI PASSO 10");
+			nextJump = false;
 			global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 			global.jumpIncreaseCount = 0;
-			player_set_state(player_jump);
+			player_set_state(player_start_jump);
 		} else {
 			//console_log("CI PASSO 11");
 			player_set_state(player_run);

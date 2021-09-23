@@ -1,4 +1,15 @@
 ///@description 
+playerTop=instance_create_layer(100,0,"Middleground_Layer",Obj_Player);
+playerBottom=instance_create_layer(100,room_height,"Middleground_Layer",Obj_Player);
+playerBottom.image_yscale*= -1;
+
+playerTop.otherPlayer=playerBottom;
+playerTop.playerID = -1;
+playerTop.playerCommandID = -1;
+playerBottom.otherPlayer=playerTop;
+playerBottom.playerID = 1;
+playerBottom.playerCommandID = 1;
+
 objBackgroundGroundHead = instance_find(Obj_Ground,0);
 objBackgroundGroundTail = instance_find(Obj_Ground,1);
 objBackgroundHead = instance_find(Obj_Background, 0);
