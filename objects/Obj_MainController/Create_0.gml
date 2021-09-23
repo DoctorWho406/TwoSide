@@ -23,3 +23,5 @@
 
 global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 global.jumpIncreaseCount = 0;
+
+enum collisionState {collidingOnLeft, collidingOnTop, collidingOnDown};
