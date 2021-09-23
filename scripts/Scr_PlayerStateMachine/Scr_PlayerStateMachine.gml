@@ -9,6 +9,7 @@ function player_set_state(_New_State) {
 			yRelative = 0;
 		break;
 		case player_start_jump:
+			//audio_play_sound("Snd_JumpSound",false);
 			sprite_index = Spr_Player_Up_Jump_Start;
 			ySpeed = PLAYER_JUMP_SPEED;
 		break;
@@ -128,6 +129,7 @@ function player_land() {
 }
 
 function player_counter() {
+		//audio_play_sound("Snd_CounterSound",false);
 	if (image_index > image_number - 1)  {
 		global.jumpIncreaseCount = 0;
 		global.jumpHeight = PLAYER_H_JUMP_INITIAL;
@@ -136,5 +138,6 @@ function player_counter() {
 }
 
 function player_dead() {
+	//audio_play_sound("Snd_DeathSound",false);
 	game_restart();
 }
