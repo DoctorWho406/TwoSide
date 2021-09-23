@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Spr_Background_Azure_1",
-    "path": "sprites/Spr_Background_Azure_1/Spr_Background_Azure_1.yy",
+    "name": "Spr_Background_2",
+    "path": "sprites/Spr_Background_2/Spr_Background_2.yy",
   },
   "solid": false,
   "visible": true,
@@ -31,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Object1627",
+  "name": "Obj_Background_Down_2",
   "tags": [],
   "resourceType": "GMObject",
 }
