@@ -55,7 +55,7 @@
     {"id":{"name":"Obj_HardGround","path":"objects/Obj_HardGround/Obj_HardGround.yy",},"order":12,},
     {"id":{"name":"Spr_Menu_Baclground_P_Botton","path":"sprites/Spr_Menu_Baclground_P_Botton/Spr_Menu_Baclground_P_Botton.yy",},"order":34,},
     {"id":{"name":"Obj_Crate_Black","path":"objects/Obj_Crate_Black/Obj_Crate_Black.yy",},"order":29,},
-    {"id":{"name":"Object21","path":"objects/Object21/Object21.yy",},"order":20,},
+    {"id":{"name":"Obj_Tutorial_P","path":"objects/Obj_Tutorial_P/Obj_Tutorial_P.yy",},"order":20,},
     {"id":{"name":"Obj_background_Down_1","path":"objects/Obj_background_Down_1/Obj_background_Down_1.yy",},"order":23,},
     {"id":{"name":"Spr_Player_Crunch_End","path":"sprites/Spr_Player_Crunch_End/Spr_Player_Crunch_End.yy",},"order":19,},
     {"id":{"name":"Spr_Background_3","path":"sprites/Spr_Background_3/Spr_Background_3.yy",},"order":37,},
