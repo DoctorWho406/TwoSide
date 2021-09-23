@@ -39,7 +39,7 @@ function player_run() {
 		player_set_state(player_start_jump);
 	} else if(player_command_counter(playerID, playerCommandID)) {
 		player_set_state(player_counter);
-	} else if (otherPlayer.state == player_land && otherPlayer.cronoCounter == PLAYER_COUNTER_TIMER * FPS) {
+	} else if (otherPlayer.state == player_land && otherPlayer.cronoCounter == PLAYER_COUNTER_TIMER) {
 		player_set_state(player_start_jump);
 		if(global.jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
 			global.jumpIncreaseCount++;			
@@ -93,7 +93,7 @@ function player_land() {
 		nextJump = true;
 		//console_log("SALTO PRENOTATO 2");
 	}
-	if(cronoCounter < PLAYER_COUNTER_TIMER * FPS) {
+	if(cronoCounter < PLAYER_COUNTER_TIMER) {
 		//console_log("CI PASSO 8");
 		cronoCounter ++;
 	} else {
