@@ -92,6 +92,13 @@ function player_middle_jump() {
 }
 
 function player_end_jump() {
+	var ground = instance_find(Obj_Ground,0);
+	if(firstTime) {	
+		if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
+			firstTime = false;
+			player_set_state(player_run);
+		}
+	} else {
 	//console_log("CI PASSO 6");
 	if(player_command_jump(playerID, playerCommandID)) {
 		nextJump = true;
@@ -99,12 +106,11 @@ function player_end_jump() {
 	} else if(player_command_counter(playerID, playerCommandID)){
 		nextCount = true;
 	}
-	var ground = instance_find(Obj_Ground,0);
 		if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
 			//console_log("CI PASSO 7");
 			player_set_state(player_land);
 		}
-
+	}
 }
 
 function player_land() {
