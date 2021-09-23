@@ -7,6 +7,7 @@ ySpeed = - PLAYER_JUMP_SPEED;
 yRelative = abs(y - instance_find(Obj_Ground, 0));
 state = player_jump;
 nextJump = false;
+nextCount = false;
 cronoMiddleJump = 0;
 cronoCounter = 0;
 counter = false;

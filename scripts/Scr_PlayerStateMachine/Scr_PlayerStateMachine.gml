@@ -4,27 +4,27 @@
 function player_set_state(_New_State) {
 	switch(_New_State) {
 		case player_run:
-			sprite_index = img_Run;
+			sprite_index = Spr_Player_Run;
 			ySpeed = 0;
 			yRelative = 0;
 		break;
 		case player_start_jump:
 			//audio_play_sound("Snd_JumpSound",false);
-			sprite_index = img_jump_Start;
+			sprite_index = Spr_Player_Up_Jump_Start;
 			ySpeed = PLAYER_JUMP_SPEED;
 		break;
 		case player_jump:
-			sprite_index = img_jump_Loop;
+			sprite_index = Spr_Player_Up_Jump_Loop;
 		break;
 		case player_middle_jump:
-			sprite_index = img_jump_Loop;
+			sprite_index = Spr_Player_Up_Jump_Loop;
 			ySpeed = 0;
 		break;
 		case player_end_jump:
-			sprite_index = img_jump_Loop;
+			sprite_index = Spr_Player_Up_Jump_Loop;
 		break;
 		case player_land:
-			sprite_index = img_jump_landing;
+			sprite_index = Spr_Player_Up_Jump_Landing;
 			var ground = instance_find(Obj_Ground, 0);
 			y = ground.y + ((ground.sprite_height * 0.5 + 1) * playerID);
 			//y = ground.y + (ground.sprite_height * 0.5);
@@ -96,6 +96,8 @@ function player_end_jump() {
 	if(player_command_jump(playerID, playerCommandID)) {
 		nextJump = true;
 		//console_log("SALTO PRENOTATO 1");
+	} else if(player_command_counter(playerID, playerCommandID)){
+		nextCount = true;
 	}
 	var ground = instance_find(Obj_Ground,0);
 		if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
@@ -106,20 +108,32 @@ function player_end_jump() {
 }
 
 function player_land() {
+	//Premo salto
 	if(player_command_jump(playerID, playerCommandID)) {
 		nextJump = true;
 		//console_log("SALTO PRENOTATO 2");
+	} else if(player_command_counter(playerID, playerCommandID)){
+		nextCount = true;
 	}
 	if(cronoCounter < PLAYER_COUNTER_TIMER) {
 		//console_log("CI PASSO 8");
 		cronoCounter ++;
-		if(otherPlayer.state == player_end_jump) {
-			nextJump = true;
-			otherPlayer.nextJump = true;
+		if(otherPlayer.state == player_end_jump || otherPlayer.state == player_land) {
+			if(!nextCount) {
+				nextJump = true;
+			}
+			if(!otherPlayer.nextCount) {
+				otherPlayer.nextJump = true;
+			}
 		}
 	} else {
 		//console_log("CI PASSO 9");
-		if(nextJump) {
+		if(nextCount) {
+			nextCount = false;
+			global.jumpHeight = PLAYER_H_JUMP_INITIAL;
+			global.jumpIncreaseCount = 0;
+			player_set_state(player_counter);			
+		} else if(nextJump) {
 			//console_log("CI PASSO 10");
 			nextJump = false;
 			global.jumpHeight = PLAYER_H_JUMP_INITIAL;
