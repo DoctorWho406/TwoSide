@@ -95,6 +95,7 @@ function player_end_jump() {
 	var ground = instance_find(Obj_Ground,0);
 	if(firstTime) {	
 		if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
+			y = ground.y + ((ground.sprite_height * 0.5 + 1) * playerID);
 			firstTime = false;
 			player_set_state(player_run);
 		}
