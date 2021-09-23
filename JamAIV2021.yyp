@@ -1,8 +1,8 @@
 {
   "resources": [
-    {"id":{"name":"Spr_Player_Crunch_Start","path":"sprites/Spr_Player_Crunch_Start/Spr_Player_Crunch_Start.yy",},"order":17,},
+    {"id":{"name":"Spr_Player_Crunch","path":"sprites/Spr_Player_Crunch/Spr_Player_Crunch.yy",},"order":17,},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},"order":1,},
-    {"id":{"name":"Sprite49","path":"sprites/Sprite49/Sprite49.yy",},"order":48,},
+    {"id":{"name":"Spr_Player_Up_Apice","path":"sprites/Spr_Player_Up_Apice/Spr_Player_Up_Apice.yy",},"order":48,},
     {"id":{"name":"Spr_Player_Down_Landing","path":"sprites/Spr_Player_Down_Landing/Spr_Player_Down_Landing.yy",},"order":44,},
     {"id":{"name":"Obj_Ramp","path":"objects/Obj_Ramp/Obj_Ramp.yy",},"order":7,},
     {"id":{"name":"Object20","path":"objects/Object20/Object20.yy",},"order":19,},
@@ -14,7 +14,7 @@
     {"id":{"name":"Obj_MainController_Menu","path":"objects/Obj_MainController_Menu/Obj_MainController_Menu.yy",},"order":14,},
     {"id":{"name":"Spr_Spring","path":"sprites/Spr_Spring/Spr_Spring.yy",},"order":4,},
     {"id":{"name":"Spr_Background_2","path":"sprites/Spr_Background_2/Spr_Background_2.yy",},"order":36,},
-    {"id":{"name":"Sprite48","path":"sprites/Sprite48/Sprite48.yy",},"order":47,},
+    {"id":{"name":"Spr_Player_Down_Apice","path":"sprites/Spr_Player_Down_Apice/Spr_Player_Down_Apice.yy",},"order":47,},
     {"id":{"name":"Sprite51","path":"sprites/Sprite51/Sprite51.yy",},"order":50,},
     {"id":{"name":"Sprite50","path":"sprites/Sprite50/Sprite50.yy",},"order":49,},
     {"id":{"name":"Spr_Player_Down_Jump_Loop","path":"sprites/Spr_Player_Down_Jump_Loop/Spr_Player_Down_Jump_Loop.yy",},"order":45,},
@@ -69,7 +69,7 @@
     {"id":{"name":"Obj_Background_Down_3","path":"objects/Obj_Background_Down_3/Obj_Background_Down_3.yy",},"order":25,},
     {"id":{"name":"Spr_Ramp","path":"sprites/Spr_Ramp/Spr_Ramp.yy",},"order":6,},
     {"id":{"name":"Spr_Player_Run","path":"sprites/Spr_Player_Run/Spr_Player_Run.yy",},"order":1,},
-    {"id":{"name":"Sprite47","path":"sprites/Sprite47/Sprite47.yy",},"order":46,},
+    {"id":{"name":"Spr_Player_Down_jump_Start","path":"sprites/Spr_Player_Down_jump_Start/Spr_Player_Down_jump_Start.yy",},"order":46,},
     {"id":{"name":"Spr_Menu_Background_Player_Black","path":"sprites/Spr_Menu_Background_Player_Black/Spr_Menu_Background_Player_Black.yy",},"order":30,},
     {"id":{"name":"Spr_Player_Up_Jump_Landing","path":"sprites/Spr_Player_Up_Jump_Landing/Spr_Player_Up_Jump_Landing.yy",},"order":20,},
     {"id":{"name":"Spr_Teleport","path":"sprites/Spr_Teleport/Spr_Teleport.yy",},"order":5,},
