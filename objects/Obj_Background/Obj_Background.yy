@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Bacground",
+    "path": "folders/Objects/Bacground.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_Background",

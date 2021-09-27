@@ -101,8 +101,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Pink_Player",
+    "path": "folders/Sprites/Player/Pink_Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "Spr_Player_Up_Apice",

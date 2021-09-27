@@ -101,8 +101,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Black_Player",
+    "path": "folders/Sprites/Player/Black_Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "Spr_Player_Down_Crunch",

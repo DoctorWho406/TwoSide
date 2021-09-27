@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Game_Obj",
+    "path": "folders/Sprites/Game_Obj.yy",
   },
   "resourceVersion": "1.0",
   "name": "Spr_Spine_Down",

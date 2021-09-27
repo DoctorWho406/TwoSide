@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Background_Up",
+    "path": "folders/Objects/Bacground/Background_Up.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_Background_Up_Azure_1",

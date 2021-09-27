@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "GamePlay_Obj",
+    "path": "folders/Objects/GamePlay_Obj.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_Spine",

@@ -13,8 +13,8 @@
   "soundFile": "Snd_GamePlaySound.wav",
   "duration": 64.0,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Snd_GamePlay",
+    "path": "folders/Sounds/Snd_GamePlay.yy",
   },
   "resourceVersion": "1.0",
   "name": "Snd_GamePlaySound",

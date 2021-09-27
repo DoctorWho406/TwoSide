@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Spr_Background_Down_1",
-    "path": "sprites/Spr_Background_Down_1/Spr_Background_Down_1.yy",
+    "name": "Spr_Down_Background_1",
+    "path": "sprites/Spr_Down_Background_1/Spr_Down_Background_1.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Background_Down",
+    "path": "folders/Objects/Bacground/Background_Down.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_background_Down_1",

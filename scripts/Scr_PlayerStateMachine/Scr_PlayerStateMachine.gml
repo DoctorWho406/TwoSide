@@ -9,7 +9,7 @@ function player_set_state(_New_State) {
 			yRelative = 0;
 		break;
 		case player_start_jump:
-			audio_play_sound(SndJump,1000,false);
+			audio_play_sound(Snd_Jump_Player,1000,false);
 			sprite_index = img_jump_Start;
 			ySpeed = PLAYER_JUMP_SPEED;
 		break;
@@ -154,7 +154,7 @@ function player_land() {
 }
 
 function player_counter() {
-		audio_play_sound(Counter,1000,false);
+		audio_play_sound(Snd_Counter_Player,1000,false);
 	if (image_index > image_number - 1)  {
 		global.jumpIncreaseCount = 0;
 		global.jumpHeight = PLAYER_H_JUMP_INITIAL;
@@ -163,6 +163,6 @@ function player_counter() {
 }
 
 function player_dead() {
-	audio_play_sound(Death,1000,false);
+	audio_play_sound(Snd_Death_Player,1000,false);
 	room_goto_next();
 }

@@ -93,8 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Up_Background",
+    "path": "folders/Sprites/Background/Up_Background.yy",
   },
   "resourceVersion": "1.0",
   "name": "Spr_Background_Azure_1",
