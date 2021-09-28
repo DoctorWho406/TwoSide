@@ -1,6 +1,6 @@
 {
   "compression": 1,
-  "volume": 1.0,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "Snd_MenuPlaySound.wav",
-  "duration": 21.3333321,
+  "duration": 42.6666679,
   "parent": {
     "name": "Snd_GamePlay",
     "path": "folders/Sounds/Snd_GamePlay.yy",

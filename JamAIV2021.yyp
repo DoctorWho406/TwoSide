@@ -45,6 +45,7 @@
     {"id":{"name":"Obj_Spine","path":"objects/Obj_Spine/Obj_Spine.yy",},"order":6,},
     {"id":{"name":"Spr_Player_Up_Jump_Loop","path":"sprites/Spr_Player_Up_Jump_Loop/Spr_Player_Up_Jump_Loop.yy",},"order":7,},
     {"id":{"name":"Obj_Spring","path":"objects/Obj_Spring/Obj_Spring.yy",},"order":9,},
+    {"id":{"name":"Snd_Transition","path":"sounds/Snd_Transition/Snd_Transition.yy",},"order":4,},
     {"id":{"name":"Obj_HardGround","path":"objects/Obj_HardGround/Obj_HardGround.yy",},"order":10,},
     {"id":{"name":"Obj_Crate_Black","path":"objects/Obj_Crate_Black/Obj_Crate_Black.yy",},"order":1,},
     {"id":{"name":"Spr_Start_Menu_Background","path":"sprites/Spr_Start_Menu_Background/Spr_Start_Menu_Background.yy",},"order":7,},
@@ -142,7 +143,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.4.583",
+    "IDEVersion": "2.3.4.580",
   },
   "resourceVersion": "1.4",
   "name": "JamAIV2021",
