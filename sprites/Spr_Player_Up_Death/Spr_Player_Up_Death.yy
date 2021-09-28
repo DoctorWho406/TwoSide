@@ -50,7 +50,7 @@
     "spriteId": {"name":"Spr_Player_Up_Death","path":"sprites/Spr_Player_Up_Death/Spr_Player_Up_Death.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 12.0,
+    "playbackSpeed": 8.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

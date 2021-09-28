@@ -167,11 +167,15 @@ function player_counter() {
 
 function player_dead() {
 	global.Obj_Stop=true;
+	var ground = instance_find(Obj_Ground,0);
+	if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
+	y = ground.y + ((ground.sprite_height * 0.5 + 1) * playerID);
+	}
+	if(ySpeed== _Player_ID)
 	sprite_index = img_death;
 	otherPlayer.sprite_index= otherPlayer.img_death;
 	audio_play_sound(Snd_Death_Player,1000,false);
-	if(image_index > image_number - 1){
-    playerIsAlive=false;}
-
+	if(image_index > image_number - 1) playerIsAlive=false;
+	
 	//room_goto_next();
 }
