@@ -4,3 +4,4 @@ if (isColliding)
 {
 	otherPlayer.state = player_dead;
 }
+if(global.Obj_Stop)speed=0;

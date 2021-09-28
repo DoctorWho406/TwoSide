@@ -26,5 +26,5 @@
 
 global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 global.jumpIncreaseCount = 0;
-
+global.Obj_Stop = false;
 enum collisionState {collidingOnLeft, collidingOnTop, collidingOnDown};

@@ -2,8 +2,10 @@
 ///@description
 ///@param
 function player_set_state(_New_State) {
+	if(global.Obj_Stop) image_index=img_death;
 	switch(_New_State) {
 		case player_run:
+			if(!playerIsAlive) sprite_index=img_death;
 			sprite_index = img_Run;
 			ySpeed = 0;
 			yRelative = 0;
@@ -32,6 +34,9 @@ function player_set_state(_New_State) {
 			ySpeed = 0;
 			yRelative = 0;
 		break;
+		case player_dead:
+		break;
+		
 	}
 	state = _New_State;
 }
@@ -163,6 +168,11 @@ function player_counter() {
 }
 
 function player_dead() {
+	global.Obj_Stop=true;
+	sprite_index = img_death;
 	audio_play_sound(Snd_Death_Player,1000,false);
-	room_goto_next();
+	if(image_index > image_number - 1){
+    playerIsAlive=false;}
+
+	//room_goto_next();
 }

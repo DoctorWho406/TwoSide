@@ -2,7 +2,7 @@
 otherPlayer = noone;
 playerID = 0;
 playerCommandID = 0;
-
+playerIsAlive= true;
 firstTime = true;
 
 ySpeed = - PLAYER_JUMP_SPEED;

@@ -15,3 +15,4 @@ if (isColliding)
 		//Boh
 	}
 }
+if(global.Obj_Stop)speed=0;

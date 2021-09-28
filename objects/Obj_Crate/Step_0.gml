@@ -15,3 +15,4 @@ if (isColliding)
 		//CallJump
 	}
 }
+if(global.Obj_Stop)speed=0;
