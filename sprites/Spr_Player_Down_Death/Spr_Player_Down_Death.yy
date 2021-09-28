@@ -53,7 +53,7 @@
     "spriteId": {"name":"Spr_Player_Down_Death","path":"sprites/Spr_Player_Down_Death/Spr_Player_Down_Death.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
