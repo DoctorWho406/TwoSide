@@ -4,9 +4,7 @@ if (!audio_is_playing(Snd_GamePlaySound) and !audio_is_playing(Snd_Transition))
 {
 	audio_play_sound(Snd_GamePlaySound, 1000,true);
 }
-if(keyboard_check_pressed(ord("R"))) {
-	game_restart();
-}
-if(!playerTop.playerIsAlive||!playerBottom.playerIsAlive){
- room_goto_next();	
-}
+
+//if(keyboard_check_pressed(ord("R"))) {
+//	game_restart();
+//}

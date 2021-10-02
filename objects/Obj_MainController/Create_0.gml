@@ -14,17 +14,15 @@
 
 #macro		BACKGROUND_SPEED			10
 
-#macro		CRATE_SPEED					10
-
-#macro      H_MOVING_CRATE				100
-#macro      VELOCITY_MOVING_CRATE		3
-
 #macro      SCORE_START_ADD_FACTOR		4
 #macro      SCORE_MULTIPLY_FACTOR		2
 #macro		SCORE_TIMER					1 * FPS
 #macro		SCORE_INCREMENT_TIMER		5 * FPS
 
+#macro		GAME_OVER_TIMER				5 * FPS
+
 global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 global.jumpIncreaseCount = 0;
-global.Obj_Stop = false;
+global.pause = false;
+
 enum collisionState {collidingOnLeft, collidingOnTop, collidingOnDown};

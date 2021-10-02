@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "GamePlay_Obj",
-    "path": "folders/Objects/GamePlay_Obj.yy",
+    "name": "_USLESS",
+    "path": "folders/Objects/GamePlay_Obj/_USLESS.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_Teleport",

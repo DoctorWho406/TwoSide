@@ -3,4 +3,8 @@
 if(x + (sprite_width * 0.5) <= 0) {
 	x = room_width + (sprite_width * 0.5);
 }
-if(global.Obj_Stop)speed=0;
+if (global.pause) {
+	speed=0;
+} else {
+	speed = - GAME_SPEED;
+}

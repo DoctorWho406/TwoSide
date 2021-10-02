@@ -2,7 +2,6 @@
 otherPlayer = noone;
 playerID = 0;
 playerCommandID = 0;
-playerIsAlive= true;
 firstTime = true;
 
 ySpeed = - PLAYER_JUMP_SPEED;
@@ -12,14 +11,12 @@ nextJump = false;
 nextCount = false;
 cronoMiddleJump = 0;
 cronoCounter = 0;
-counter = false;
+cronoGameOver = 0;
 
-img_Run = noone;
-img_death = noone;
-img_jump_Loop = noone;
-img_jump_landing = noone;
-img_jump_Start = noone;
-img_Crunch_End = noone;
-img_Crunch_Loop = noone;
-img_Crunch_Start = noone;
-img_Apice= noone;
+spriteRun= noone;
+spriteJumpStart = noone;
+spriteJumpLoop= noone;
+spriteJumpMiddle = noone;
+spriteJumpLanding = noone;
+spriteCrunch = noone;
+spriteDeath = noone;

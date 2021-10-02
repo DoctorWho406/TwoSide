@@ -1,5 +1,4 @@
 ///@description
-var music_started = false
 audio_stop_sound(Snd_MenuPlaySound);
 if (!audio_is_playing(Snd_GamePlaySound))
 {
@@ -18,22 +17,21 @@ playerBottom.otherPlayer=playerTop;
 playerBottom.playerID = 1;
 playerBottom.playerCommandID = 1;
 
-playerTop.img_Crunch_Start = Spr_Player_Crunch;
-playerTop.img_death = Spr_Player_Up_Death;
-playerTop.img_jump_landing= Spr_Player_Up_Jump_Landing;
-playerTop.img_jump_Loop= Spr_Player_Up_Jump_Loop;
-playerTop.img_jump_Start= Spr_Player_Up_Jump_Start;
-playerTop.img_Run= Spr_Player_Run;
-playerTop.img_Apice= Spr_Player_Up_Apice;
+playerTop.spriteRun= Spr_Player_Up_Run;
+playerTop.spriteJumpStart = Spr_Player_Up_Jump_Start;
+playerTop.spriteJumpLoop= Spr_Player_Up_Jump_Loop;
+playerTop.spriteJumpMiddle = Spr_Player_Up_Jump_Middle;
+playerTop.spriteJumpLanding = Spr_Player_Up_Jump_Landing;
+playerTop.spriteCrunch = Spr_Player_Up_Crunch_Start;
+playerTop.spriteDeath = Spr_Player_Up_Death;
 
-playerBottom.img_Crunch_Start = Spr_Player_Down_Crunch;
-playerBottom.img_death = Spr_Player_Down_Death;
-playerBottom.img_jump_landing= Spr_Player_Down_Landing;
-playerBottom.img_jump_Loop= Spr_Player_Down_Jump_Loop;
-playerBottom.img_jump_Start= Spr_Player_Down_jump_Start;
-playerBottom.img_Run= Spr_Player_Down_Run;
-playerBottom.img_Apice= Spr_Player_Down_Apice;
-
+playerBottom.spriteRun= Spr_Player_Down_Run;
+playerBottom.spriteJumpStart = Spr_Player_Down_Jump_Start;
+playerBottom.spriteJumpLoop= Spr_Player_Down_Jump_Loop;
+playerBottom.spriteJumpMiddle = Spr_Player_Down_Jump_Middle;
+playerBottom.spriteJumpLanding = Spr_Player_Down_Jump_Landing;
+playerBottom.spriteCrunch = Spr_Player_Down_Crunch;
+playerBottom.spriteDeath = Spr_Player_Down_Death;
 
 
 objBackgroundGroundHead = instance_find(Obj_Ground,0);

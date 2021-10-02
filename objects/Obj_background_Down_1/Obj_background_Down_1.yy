@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "Obj_Generic_Background",
+    "path": "objects/Obj_Generic_Background/Obj_Generic_Background.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -20,18 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"backgroundAddSpeed","path":"objects/Obj_Generic_Background/Obj_Generic_Background.yy",},"objectId":{"name":"Obj_Generic_Background","path":"objects/Obj_Generic_Background/Obj_Generic_Background.yy",},"value":"1.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Background_Down",
     "path": "folders/Objects/Bacground/Background_Down.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Obj_background_Down_1",
+  "name": "Obj_Background_Down_1",
   "tags": [],
   "resourceType": "GMObject",
 }

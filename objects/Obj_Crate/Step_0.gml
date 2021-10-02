@@ -15,4 +15,9 @@ if (isColliding)
 		//CallJump
 	}
 }
-if(global.Obj_Stop)speed=0;
+
+if(global.pause) {
+	speed = 0;
+} else {
+	speed = - GAME_SPEED;
+}	

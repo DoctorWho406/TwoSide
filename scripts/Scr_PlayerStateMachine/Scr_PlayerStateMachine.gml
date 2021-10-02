@@ -4,27 +4,31 @@
 function player_set_state(_New_State) {
 	switch(_New_State) {
 		case player_run:
-			sprite_index = img_Run;
+			sprite_index = spriteRun;
 			ySpeed = 0;
 			yRelative = 0;
 		break;
 		case player_start_jump:
 			audio_play_sound(Snd_Jump_Player,1000,false);
-			sprite_index = img_jump_Start;
+			sprite_index = spriteJumpStart;
 			ySpeed = PLAYER_JUMP_SPEED;
 		break;
 		case player_jump:
-			sprite_index = img_jump_Loop;
+			sprite_index = spriteJumpLoop;
 		break;
 		case player_middle_jump:
-			sprite_index = img_jump_Loop;
+			sprite_index = spriteJumpMiddle;
 			ySpeed = 0;
 		break;
 		case player_end_jump:
-			sprite_index = img_jump_Loop;
+			sprite_index = spriteJumpLanding;
+		break;
+		case player_crunch:
+			sprite_index = spriteCrunch;
+			audio_play_sound(Snd_Counter_Player,1000,false);
 		break;
 		case player_land:
-			sprite_index = img_jump_landing;
+			sprite_index = spriteJumpLanding;
 			var ground = instance_find(Obj_Ground, 0);
 			y = ground.y + ((ground.sprite_height * 0.5 + 1) * playerID);
 			//y = ground.y + (ground.sprite_height * 0.5);
@@ -33,6 +37,7 @@ function player_set_state(_New_State) {
 			yRelative = 0;
 		break;
 		case player_dead:
+			audio_play_sound(Snd_Death_Player,1000,false);
 		break;
 		
 	}
@@ -46,7 +51,7 @@ function player_run() {
 		global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 		player_set_state(player_start_jump);
 	} else if(player_command_counter(playerID, playerCommandID)) {
-		player_set_state(player_counter);
+		player_set_state(player_crunch);
 	} else if (otherPlayer.state == player_land && otherPlayer.cronoCounter == PLAYER_COUNTER_TIMER) {
 		player_set_state(player_start_jump);
 		if(global.jumpIncreaseCount < PLAYER_MAX_JUMP_INCREASE_NUMBER) {
@@ -142,7 +147,7 @@ function player_land() {
 			nextCount = false;
 			global.jumpHeight = PLAYER_H_JUMP_INITIAL;
 			global.jumpIncreaseCount = 0;
-			player_set_state(player_counter);			
+			player_set_state(player_crunch);			
 		} else if(nextJump) {
 			//console_log("CI PASSO 10");
 			nextJump = false;
@@ -156,8 +161,7 @@ function player_land() {
 	}
 }
 
-function player_counter() {
-		audio_play_sound(Snd_Counter_Player,1000,false);
+function player_crunch() {
 	if (image_index > image_number - 1)  {
 		global.jumpIncreaseCount = 0;
 		global.jumpHeight = PLAYER_H_JUMP_INITIAL;
@@ -166,16 +170,29 @@ function player_counter() {
 }
 
 function player_dead() {
-	global.Obj_Stop=true;
-	var ground = instance_find(Obj_Ground,0);
-	if(abs(y - ground.y) - (ground.sprite_height * 0.5) <= 0) {
-	y = ground.y + ((ground.sprite_height * 0.5 + 1) * playerID);
+	global.pause = true;
+	//Metto a player_dead anche l'altro giocatore
+	if(otherPlayer.state != player_dead) {
+		otherPlayer.state = player_dead;
 	}
-	if(ySpeed== _Player_ID)
-	sprite_index = img_death;
-	otherPlayer.sprite_index= otherPlayer.img_death;
-	audio_play_sound(Snd_Death_Player,1000,false);
-	if(image_index > image_number - 1) playerIsAlive=false;
-	
-	//room_goto_next();
+	//Faccio scendere il giocatore
+	if(ySpeed != 0) {
+		ySpeed = -PLAYER_JUMP_SPEED;
+	}
+	//Se atterrato lo fermo
+	var ground = instance_find(Obj_Ground,0);
+	var distToGround = abs(y - ground.y) - (ground.sprite_height * 0.5);
+	if( distToGround < 0) {
+		ySpeed = 0;
+		y = ground.y + ((ground.sprite_height * 0.5 + 1) * playerID);
+	} else if (distToGround == 0) {
+		sprite_index = spriteDeath;
+		//Se finita l'animazione di morte inizio un contatore per GameOver
+		if(image_index > image_number - 1) {
+			cronoGameOver++;
+			if(cronoGameOver >= GAME_OVER_TIMER) {
+				room_goto_next();
+			}
+		}		
+	}
 }
