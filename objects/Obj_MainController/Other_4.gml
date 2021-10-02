@@ -22,7 +22,7 @@ playerTop.spriteJumpStart = Spr_Player_Up_Jump_Start;
 playerTop.spriteJumpLoop= Spr_Player_Up_Jump_Loop;
 playerTop.spriteJumpMiddle = Spr_Player_Up_Jump_Middle;
 playerTop.spriteJumpLanding = Spr_Player_Up_Jump_Landing;
-playerTop.spriteCrunch = Spr_Player_Up_Crunch_Start;
+playerTop.spriteCrunch = Spr_Player_Up_Crunch;
 playerTop.spriteDeath = Spr_Player_Up_Death;
 
 playerBottom.spriteRun= Spr_Player_Down_Run;

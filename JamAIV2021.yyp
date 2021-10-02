@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"Spr_Player_Up_Crunch_Start","path":"sprites/Spr_Player_Up_Crunch_Start/Spr_Player_Up_Crunch_Start.yy",},"order":1,},
+    {"id":{"name":"Spr_Player_Up_Crunch","path":"sprites/Spr_Player_Up_Crunch/Spr_Player_Up_Crunch.yy",},"order":1,},
     {"id":{"name":"StarMenu_Room","path":"rooms/StarMenu_Room/StarMenu_Room.yy",},"order":1,},
     {"id":{"name":"Spr_Player_Up_Jump_Middle","path":"sprites/Spr_Player_Up_Jump_Middle/Spr_Player_Up_Jump_Middle.yy",},"order":4,},
     {"id":{"name":"Spr_Player_Down_Jump_Landing","path":"sprites/Spr_Player_Down_Jump_Landing/Spr_Player_Down_Jump_Landing.yy",},"order":5,},
@@ -50,7 +50,6 @@
     {"id":{"name":"Spr_Start_Menu_Background","path":"sprites/Spr_Start_Menu_Background/Spr_Start_Menu_Background.yy",},"order":7,},
     {"id":{"name":"Obj_Tutorial_P","path":"objects/Obj_Tutorial_P/Obj_Tutorial_P.yy",},"order":20,},
     {"id":{"name":"Obj_Background_Down_1","path":"objects/Obj_Background_Down_1/Obj_Background_Down_1.yy",},"order":0,},
-    {"id":{"name":"Spr_Player_Up_Crunch_End","path":"sprites/Spr_Player_Up_Crunch_End/Spr_Player_Up_Crunch_End.yy",},"order":0,},
     {"id":{"name":"Spr_Down_Background_3","path":"sprites/Spr_Down_Background_3/Spr_Down_Background_3.yy",},"order":1,},
     {"id":{"name":"Spr_Player_Down_Crunch","path":"sprites/Spr_Player_Down_Crunch/Spr_Player_Down_Crunch.yy",},"order":1,},
     {"id":{"name":"Obj_Ground","path":"objects/Obj_Ground/Obj_Ground.yy",},"order":4,},
@@ -82,7 +81,6 @@
     {"id":{"name":"Obj_Background_Down_2","path":"objects/Obj_Background_Down_2/Obj_Background_Down_2.yy",},"order":1,},
     {"id":{"name":"Obj_Generic_Background","path":"objects/Obj_Generic_Background/Obj_Generic_Background.yy",},"order":3,},
     {"id":{"name":"Snd_BottonPressed","path":"sounds/Snd_BottonPressed/Snd_BottonPressed.yy",},"order":3,},
-    {"id":{"name":"Spr_Player_Up_Crunch_Loop","path":"sprites/Spr_Player_Up_Crunch_Loop/Spr_Player_Up_Crunch_Loop.yy",},"order":2,},
     {"id":{"name":"Obj_Teleport","path":"objects/Obj_Teleport/Obj_Teleport.yy",},"order":6,},
     {"id":{"name":"GamePlay_Room","path":"rooms/GamePlay_Room/GamePlay_Room.yy",},"order":0,},
   ],
