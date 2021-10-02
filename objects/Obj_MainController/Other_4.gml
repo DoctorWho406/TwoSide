@@ -34,17 +34,17 @@ playerBottom.spriteCrunch = Spr_Player_Down_Crunch;
 playerBottom.spriteDeath = Spr_Player_Down_Death;
 
 
-objBackgroundGroundHead = instance_find(Obj_Ground,0);
-objBackgroundGroundTail = instance_find(Obj_Ground,1);
-objBackgroundHead = instance_find(Obj_Background, 0);
-objBackgroundTail = instance_find(Obj_Background, 1);
+//objGroundHead = instance_find(Obj_Ground,0);
+//objGroundTail = instance_find(Obj_Ground,1);
+//objBackgroundHead = instance_find(Obj_Background, 0);
+//objBackgroundTail = instance_find(Obj_Background, 1);
 
-objBackgroundGroundHead.x = objBackgroundHead.sprite_width * 0.5;
-objBackgroundGroundHead.y= objBackgroundHead.sprite_height * 0.5;
-objBackgroundGroundTail.x = objBackgroundTail.sprite_width * 1.5;
-objBackgroundGroundTail.y= objBackgroundTail.sprite_height * 0.5;
+//objGroundHead.x = 0;
+//objGroundHead.y= room_height * 0.5;
+//objGroundTail.x = objGroundHead.sprite_width;
+//objGroundTail.y= room_height * 0.5;
 
-objBackgroundHead.x = objBackgroundHead.sprite_width * 0.5;
-objBackgroundHead.y= objBackgroundHead.sprite_height * 0.5;
-objBackgroundTail.x = objBackgroundTail.sprite_width * 1.5;
-objBackgroundTail.y= objBackgroundTail.sprite_height * 0.5;
+//objBackgroundHead.x = 0;
+//objBackgroundHead.y= 0;
+//objBackgroundTail.x = objBackgroundHead.sprite_width;
+//objBackgroundTail.y= 0;

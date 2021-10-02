@@ -37,6 +37,7 @@ function player_set_state(_New_State) {
 			yRelative = 0;
 		break;
 		case player_dead:
+			console_log("Player " + string(playerCommandID) + " morto");
 			audio_play_sound(Snd_Death_Player,1000,false);
 		break;
 		
@@ -173,24 +174,30 @@ function player_dead() {
 	global.pause = true;
 	//Metto a player_dead anche l'altro giocatore
 	if(otherPlayer.state != player_dead) {
+		console_log("Ora anche player " + string(otherPlayer.playerCommandID) + " è morto");
 		otherPlayer.state = player_dead;
-	}
-	//Faccio scendere il giocatore
-	if(ySpeed != 0) {
-		ySpeed = -PLAYER_JUMP_SPEED;
 	}
 	//Se atterrato lo fermo
 	var ground = instance_find(Obj_Ground,0);
 	var distToGround = abs(y - ground.y) - (ground.sprite_height * 0.5);
-	if( distToGround < 0) {
+	console_log("Player " + string(playerCommandID) + " dista dal pavimento " + string(distToGround));
+	if(distToGround > 1) {			//Faccio scendere il giocatore
+		console_log("Player " + string(playerCommandID) + " non era fermo. Lo faccio cadere");
+		ySpeed = -PLAYER_JUMP_SPEED;
+	} else if (distToGround < 1) {	//Risistemo la posizione del Player
 		ySpeed = 0;
 		y = ground.y + ((ground.sprite_height * 0.5 + 1) * playerID);
-	} else if (distToGround == 0) {
+		console_log("Player " + string(playerCommandID) + " è sotto il pavimento. Torna su ed ora è a " + string(y));
+	} else if (distToGround == 1) {	//Uccido il player
+		console_log("Player " + string(playerCommandID) + " è sul pavimento. Muore.");
 		sprite_index = spriteDeath;
 		//Se finita l'animazione di morte inizio un contatore per GameOver
 		if(image_index > image_number - 1) {
+			image_speed = 0;
 			cronoGameOver++;
-			if(cronoGameOver >= GAME_OVER_TIMER) {
+			console_log("Player " + string(playerCommandID) + " è morto. Count down " + string(cronoGameOver));
+			if(cronoGameOver >= GAME_OVER_TIMER) {				
+				console_log("Player " + string(playerCommandID) + " END.");
 				room_goto_next();
 			}
 		}		

@@ -1,5 +1,11 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description
+
+//Distruzione
+if(x + sprite_width * 0.5 < 0) {
+	instance_destroy();
+}
+
+//Collisione
 if (isColliding)
 {
 	if (State == collisionState.collidingOnLeft)
@@ -16,8 +22,9 @@ if (isColliding)
 	}
 }
 
+//Pausa
 if(global.pause) {
 	speed = 0;
 } else {
 	speed = - GAME_SPEED;
-}	
+}
