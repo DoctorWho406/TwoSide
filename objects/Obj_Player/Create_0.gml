@@ -5,7 +5,9 @@ playerCommandID = 0;
 firstTime = true;
 
 ySpeed = - PLAYER_JUMP_SPEED;
-yRelative = abs(y - instance_find(Obj_Ground, 0));
+console_log(instance_find(Obj_Ground, 0).y);
+console_log(y);
+yRelative = abs(y - instance_find(Obj_Ground, 0).y);
 state = player_jump;
 nextJump = false;
 nextCount = false;
